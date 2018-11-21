@@ -13,16 +13,23 @@
 
 Route::get('/', function () {
     //return view('welcome');
+
     /*\App\Post::create([
         'title'=>'testtitle',
         'content'=>'testcontent',
     ]);*/
+
     /*$post=new\App\Post();
     $post->title='test title';
     $post->content='test content';
     $post->save();*/
+
     /*$posts=\App\Post::all();
     dd($posts);*/
-    $post = \App\Post::find(1);
-    dd($post);
+
+    /*$post = \App\Post::find(1);
+    dd($post);*/
+
+    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
+    dd($posts);
 });
