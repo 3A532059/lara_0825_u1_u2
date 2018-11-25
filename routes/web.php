@@ -14,53 +14,59 @@
 Route::get('/', function () {
     //return view('welcome');
 
-    /*\App\Post::create([
-        'title'=>'testtitle',
-        'content'=>'testcontent',
-    ]);*/
+//    \App\Post::create([
+//        'title'=>'testtitle',
+//       'content'=>'testcontent',
+//    ]);
 
-    /*$post=new\App\Post();
-    $post->title='test title';
-    $post->content='test content';
-    $post->save();*/
+//    $post =new\App\Post();
+//    $post ->title = 'test title';
+//    $post ->content = 'test content';
+//    $post ->save();
 
-    /*$posts=\App\Post::all();
-    dd($posts);*/
+//    $post=\App\Post::find(1);
+//    $post->update([
+//    'title'=>'updated title',
+//    'content'=>'updated content',
+//    ]);
 
-    /*$post = \App\Post::find(1);
-    dd($post);*/
+//    $posts=\App\Post::all();
+//    dd($posts);
 
-    /*$posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
-    dd($posts);*/
+//    $post = \App\Post::find(1);
+//    dd($post);
 
-    /*$post = \App\Post::find(1);
-    $post->update([
-        'title' => 'updated title',
-        'content' => 'updated content',
-    ]);*/
+//   $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
+//    dd($posts);
 
-    /*$post = \App\Post::find(1);
-    $post->title = 'saved title';
-    $post->content = 'saved content';
-    $post->save();*/
+//    $post = \App\Post::find(1);
+//    $post->update([
+//        'title' => 'updated title',
+//        'content' => 'updated content',
+//     ]);
 
-    /*$post = \App\Post::find(1);
-    $post->delete();*/
+//    $post = \App\Post::find(1);
+//    $post->title = 'saved title';
+//    $post->content = 'saved content';
+//    $post->save();
 
-    //\App\Post::destroy(3,5,7);
+//    $post = \App\Post::find(1);
+//    $post->delete();
 
-    /*$allPosts = \App\Post::all();
-    dd($allPosts);
-    $featuredPosts = \App\Post::where('is_feature', 1)->get();
-    dd($featuredPosts);*/
+//    \App\Post::destroy(3,5,7);
 
-    /*$fourthPost = \App\Post::find(4);
-    dd($fourthPost);
-    $lastPost = \App\Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);*/
+//    $allPosts = \App\Post::all();
+//   dd($allPosts);
+//    $featuredPosts = \App\Post::where('is_feature', 1)->get();
+//    dd($featuredPosts);
 
-    $post=\App\Post::find(1);
+//    $fourthPost = \App\Post::find(4);
+//    dd($fourthPost);
+//    $lastPost = \App\Post::orderBy('id', 'DESC')->first();
+//    dd($lastPost);
+
+    $post=\App\Post::find(6);
     foreach($post->comments as $comment) {
-        echo $comment->content . '<br>';
+        echo $comment->content.'<br>';
     }
 });
